@@ -2,13 +2,24 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Employee = require('./lib/employee');
-const 
+const ranchHand = require('./lib/ranchHand')
 
 // function that has html template
 //      includes ${create employee card} tag within
-const generateHTML = ({})
+const generateHTML = ({}) =>
 `<!DOCTYPE html>....`
 
+const renderEmployeeCard = ({fullName, role, email, stall, horseName, gitHub}) =>
+`<div class="card" style="width: 18rem;">
+<div class="card-header">
+    ${fullName}
+</div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+</div>`
 // func to generateCowboyCard
 
 

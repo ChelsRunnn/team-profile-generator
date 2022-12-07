@@ -5,27 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=La+Belle+Aurore&family=Playfair+Display+SC&family=Playfair+Display:ital@0;1&family=Rye&display=swap" rel="stylesheet">
+    <link rel="style-reset" href="./dist/reset.css"/>
+    <link rel="stylesheet" href="./dist/style.css"/>
     <title>The Ranch</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-light bg-light">
-      <span class="navbar-brand mb-0 h1">Meet the Outfit</span>
+  <nav class="navbar navbar-light bg-light cstm-nav">
+      <h1 class="mb-0 h1">the Ranch</h1>
+      <h2>Meet the Outfit</h2>
   </nav>
 
-  <section class="container-fluid">
-    <div class="card" style="width: 18rem;">
-        <div class="card-header">
-            ${fullName}
+  <main class="main">
+  <section class="container-fluid cstm-container">
+    <div class="card cstm-card" style="width: 25rem;">
+        <div class="card-header cstm-header">
+            <h3>Billy Wade</h3>
+            <h4>Manager</h4>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+        <ul class="list-group-flush cstm-body">
+            <li class="list-group-item">Horse Name: Racer</li>
+            <li class="list-group-item">Stall: 13</li>
+            <li class="list-group-item">Email: cowboy1@gmail.com</li>
         </ul>
     </div>
   </section>
+  </main>
 
 </body>
 
