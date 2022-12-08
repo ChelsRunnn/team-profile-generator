@@ -1,31 +1,13 @@
 // packages required: 
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const Employee = require('./lib/employee');
+const templates = require('./src/templates')
 const Manager = require('./lib/manager');
 const Wrangler = require('./lib/wrangler');
 const ranchHand = require('./lib/ranchHand');
 let outfit = [];
-// const ranchHand = require('./lib/ranchHand')
 
-// function that has html template
-//      includes ${create employee card} tag within
-// const generateHTML = ({}) =>
-// `<!DOCTYPE html>....`
-
-// const renderEmployeeCard = ({fullName, role, email, stall, horseName, gitHub}) =>
-// `<div class="card" style="width: 18rem;">
-// <div class="card-header">
-//     ${fullName}
-// </div>
-// <ul class="list-group list-group-flush">
-//     <li class="list-group-item">Cras justo odio</li>
-//     <li class="list-group-item">Dapibus ac facilisis in</li>
-//     <li class="list-group-item">Vestibulum at eros</li>
-// </ul>
-// </div>`
-// func to generateCowboyCard
-
+// Generate template functions
 function generateHtml() {
   return `<!DOCTYPE html>
   <html lang="en">
@@ -58,7 +40,6 @@ function generateHtml() {
   </html>  
   `
 }
-
 function generateCard() {  
   const outfitArr = outfit.map((cowpoke) => {
     if (cowpoke.role === 'Ranch Manager') {
@@ -111,7 +92,6 @@ function generateCard() {
   // console.log(outfitArr);
   return outfitArr;
 }
-
 function generateCss() {
   return `
   :root{
@@ -189,7 +169,6 @@ border-top-color: var(--col-on-surface1); */
 }
   `
 }
-
 function generateReset() {
   return `
   /* Box sizing rules */
@@ -269,6 +248,7 @@ select {
   `
 }
 
+// .prompt for additional outfit members
 const addMember = () => {
   inquirer.prompt([
     {
@@ -338,7 +318,7 @@ const addMember = () => {
     })
 }
 
-// questions for Manager first/mandatory (then other employees)
+// .prompt for Manager 
 function main() {
   inquirer.prompt([
     {
@@ -382,6 +362,7 @@ function main() {
       if (managerAnswers.add === true) {
         addMember()
       } else {
+        // write 3 files (html, css, and reset.css)
         const htmlTemplate = generateHtml();
           fs.writeFile('index.html', (htmlTemplate), (err) =>
                 err ? console.log(err) : console.log('Successfully created index.html!')
@@ -399,79 +380,5 @@ function main() {
       }
     })
 }
-
-
-//   const managerQs = [
-//     {
-//       name: 'fullName',
-//       type: 'input',
-//       message: 'Employee full name'
-//     },
-//     {
-//         name: 'role',
-//         type: 'list',
-//         message: ['Ranch Manager']
-//       },
-//       {
-//         name: 'email',
-//         type: 'input',
-//         message: 'Employee email'
-//       },
-//       {
-//         name: 'horseName',
-//         type: 'input',
-//         message: 'Horse name'
-//       },
-//       {
-//         name: 'stall',
-//         type: 'input',
-//         message: 'Stall number'
-//       }
-//   ]
-
-//   const cowboyQs = [
-//   {
-//     name: 'fullName',
-//     type: 'input',
-//     message: 'Employee full name'
-//   },
-//   {
-//       name: 'role',
-//       type: 'checkbox',
-//       message: ['Wrangler', 'Ranch Hand']
-//     },
-//     {
-//       name: 'email',
-//       type: 'input',
-//       message: 'Employee email'
-//     },
-//     {
-//       name: 'horseName',
-//       type: 'input',
-//       message: 'Horse name'
-//     },
-//     {
-//       name: 'stall',
-//       type: 'input',
-//       message: 'Stall number'
-//     },
-// {
-//     name: 'gitHub',
-//     type: 'input',
-//     message: 'Outlaw alias (github name)'
-//   }
-//   ]
-
-// .then writeFile method template filled with answers 
-// .then((managerAnswers) => {
-//     const htmlTemplate = new Employee(managerAnswers);
-// htmlTemplate.generateHtml()
-// need to make new instance? to then call the generateHtml() on that instance?
-
-//     fs.writeFile('index.html', htmlTemplate.generateHtml(), (err) =>
-//       err ? console.log(err) : console.log('Successfully created index.html!')
-//     );
-//     // second fs.writeFile('style.css') to import my styles??
-
 
 main();
