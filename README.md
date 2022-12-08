@@ -22,8 +22,9 @@ This application runs on Node.js and requires inquirer to be installed. Run <npm
 
 ## Usage
 
-![Homepage-Screenshot](./Assets/WorkDaySchedulerScreenshot.png)
+![screenshot](./lib/team-profile-generator.png)
 
+Visit the demo video [here](https://drive.google.com/file/d/1C2HF9CQoPODgbf2gNkVPNxXFOgz9LwvN/view).
 
 
 ## Credits

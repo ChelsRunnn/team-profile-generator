@@ -1,7 +1,6 @@
 // packages required: 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const templates = require('./src/templates')
 const Manager = require('./lib/manager');
 const Wrangler = require('./lib/wrangler');
 const ranchHand = require('./lib/ranchHand');
@@ -77,7 +76,7 @@ function generateCard() {
       <div class="card cstm-card" style="width: 25rem;">
         <div class="card-header cstm-header">
           <h3>${cowpoke.name}</h3>
-          <h4><<i class="fa-solid fa-hammer"></i>  ${cowpoke.role}</h4> 
+          <h4><i class="fa-solid fa-hammer"></i>  ${cowpoke.role}</h4> 
         </div>
         <ul class="list-group-flush cstm-body">
           <li class="list-group-item">Horse Name: ${cowpoke.horseName}</li>
