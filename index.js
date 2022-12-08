@@ -59,8 +59,6 @@ function generateHtml() {
   `
 }
 
-// TODO: link email / gitHub 
-
 function generateCard() {  
   const outfitArr = outfit.map((cowpoke) => {
     if (cowpoke.role === 'Ranch Manager') {
@@ -322,9 +320,6 @@ const addMember = () => {
       if (cowboyAnswers.add == true) {
         addMember()
       } else {
-        // console.log('howdy', outfit)
-        // generateCard()
-        // TODO: move my writeFile logic here
         const htmlTemplate = generateHtml();
           fs.writeFile('index.html', (htmlTemplate), (err) =>
                 err ? console.log(err) : console.log('Successfully created index.html!')
@@ -352,9 +347,9 @@ function main() {
       name: 'fullName',
     },
     // {
-    //   name: 'role',
-    //   type: 'confirm',
-    //   message: ['Ranch Manager?']
+    //   name: 'aka',
+    //   type: 'input',
+    //   message:'Also known as'
     // },
     {
       name: 'email',
@@ -386,6 +381,21 @@ function main() {
       // console.log(outfit);
       if (managerAnswers.add === true) {
         addMember()
+      } else {
+        const htmlTemplate = generateHtml();
+          fs.writeFile('index.html', (htmlTemplate), (err) =>
+                err ? console.log(err) : console.log('Successfully created index.html!')
+              );
+      
+          const cssTemplate = generateCss();
+          fs.writeFile('style.css', (cssTemplate), (err) =>
+              err ? console.log(err) : console.log('Successfully created style.css!')
+            ); 
+
+          const resetTemplate = generateReset();
+          fs.writeFile('reset.css', (resetTemplate), (err) =>
+              err ? console.log(err) : console.log('Successfully created reset.css!')
+            ); 
       }
     })
 }
