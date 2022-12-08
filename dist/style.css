@@ -14,12 +14,13 @@ background-color: var(--col-p-blue);
 margin-bottom: 0;
 height: 120px;
 text-align: center;
+border-top: 17px solid transparent !important;
 }
 h1 {
 font-size: 80px !important;
 padding-bottom: 5px ;
 line-height: 0 !important;
-/* margin-top: 20px; */
+margin-top: 10px;
 font-family: 'Diplomata SC', 'Rye', 'Playfair Display SC' !important;
 }
 h2 {
