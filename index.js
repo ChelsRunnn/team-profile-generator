@@ -68,7 +68,7 @@ function generateCard() {
       <div class="card cstm-card" style="width: 25rem;">
         <div class="card-header cstm-header">
           <h3>${cowpoke.fullName}</h3>
-          <h4>Ranch Manager</h4> 
+          <h4><i class="fa-solid fa-star"></i>  Ranch Manager</h4> 
         </div>
         <ul class="list-group-flush cstm-body">
           <li class="list-group-item">Horse Name: ${cowpoke.horseName}</li>
@@ -82,13 +82,13 @@ function generateCard() {
       <div class="card cstm-card" style="width: 25rem;">
          <div class="card-header cstm-header">
           <h3>${cowpoke.name}</h3>
-          <h4>${cowpoke.role}<i class="fa-solid fa-hat-cowboy"></i></i></h4> 
+          <h4><i class="fa-solid fa-hat-cowboy"></i>   ${cowpoke.role}</h4> 
          </div>
          <ul class="list-group-flush cstm-body">
           <li class="list-group-item">Horse Name: ${cowpoke.horseName}</li>
           <li class="list-group-item">Stall: ${cowpoke.stall}</li>
           <li class="list-group-item">Email: <a href="${cowpoke.email}"> ${cowpoke.email}</a></li>
-          <li class="list-group-item">Outlaw Alias: <a href="https://github.com/${cowboke.gitHub}"> ${cowpoke.gitHub}</a></li>
+          <li class="list-group-item">Outlaw Alias: <a href="https://github.com/${cowpoke.gitHub}" target="_blank"> ${cowpoke.gitHub}</a></li>
 
          </ul>
        </div>
@@ -98,13 +98,13 @@ function generateCard() {
       <div class="card cstm-card" style="width: 25rem;">
         <div class="card-header cstm-header">
           <h3>${cowpoke.name}</h3>
-          <h4>${cowpoke.role}<i class="fa-solid fa-magnet"></i></h4> 
+          <h4><<i class="fa-solid fa-hammer"></i>  ${cowpoke.role}</h4> 
         </div>
         <ul class="list-group-flush cstm-body">
           <li class="list-group-item">Horse Name: ${cowpoke.horseName}</li>
           <li class="list-group-item">Stall: ${cowpoke.stall}</li>
           <li class="list-group-item">Email: <a href="${cowpoke.email}"> ${cowpoke.email}</a></li>
-          <li class="list-group-item">Outlaw Alias: <a href="https://github.com/${cowboke.gitHub}"> ${cowpoke.gitHub}</a></li>
+          <li class="list-group-item">Outlaw Alias: <a href="https://github.com/${cowpoke.gitHub}" target="_blank"> ${cowpoke.gitHub}</a></li>
         </ul>
       </div>
       `
